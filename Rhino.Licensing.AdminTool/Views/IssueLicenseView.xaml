@@ -19,7 +19,7 @@
         
             <TabControl.Items>
                 <TabItem Header="License Info" Width="120" HorizontalContentAlignment="Center">
-                    <views:LicenseInfoView cal:View.Model="{Binding License}" />
+                    <views:LicenseInfoView cal:View.Model="{Binding LicenseInfo}" />
                 </TabItem>
                 <TabItem Header="User Data" Width="120" HorizontalContentAlignment="Center" >
                     <views:UserDataView cal:View.Model="{Binding UserData}" />

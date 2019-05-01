@@ -10,7 +10,7 @@ namespace Rhino.Licensing.AdminTool.Model
     {
         private ObservableCollection<UserData> _data;
         private string _ownerEmail;
-		private string _pluginID;
+		private string _plugin;
 		private DateTime? _expirationDate;
         private LicenseType _licenseType;
         private Guid _id;
@@ -44,13 +44,48 @@ namespace Rhino.Licensing.AdminTool.Model
         }
 
 		[DataMember]
-		public virtual string PluginID
+		public virtual string Plugin
 		{
-			get { return _pluginID; }
+			get { return _plugin; }
 			set
 			{
-				_pluginID = value;
-				NotifyOfPropertyChange(() => PluginID);
+				_plugin = value;
+				NotifyOfPropertyChange(() => Plugin);
+			}
+		}
+
+		public string PluginName
+		{
+			get
+			{
+				var info = PluginInfo;
+
+				if (info != null && info.Length > 0)
+					return info[0].Trim();
+
+				return String.Empty;
+			}
+		}
+
+		public string PluginID
+		{
+			get
+			{
+				var info = PluginInfo;
+
+				if (info != null && info.Length > 1)
+					return info[1].Trim();
+
+				return String.Empty;
+			}
+		}
+
+		protected string[] PluginInfo
+		{
+			get
+			{
+				var info = Plugin.Trim().Trim(new char[] { '[', ']' });
+				return info.Split(',');
 			}
 		}
 
