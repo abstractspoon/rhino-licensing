@@ -9,8 +9,9 @@ namespace Rhino.Licensing.AdminTool.Model
     public class License : PropertyChangedBase
     {
         private ObservableCollection<UserData> _data;
-        private string _ownerName;
-        private DateTime? _expirationDate;
+        private string _ownerEmail;
+		private string _pluginID;
+		private DateTime? _expirationDate;
         private LicenseType _licenseType;
         private Guid _id;
 
@@ -32,17 +33,28 @@ namespace Rhino.Licensing.AdminTool.Model
         }
 
         [DataMember]
-        public virtual string OwnerName
+        public virtual string OwnerEmail
         {
-            get { return _ownerName; }
+            get { return _ownerEmail; }
             set
             {
-                _ownerName = value;
-                NotifyOfPropertyChange(() => OwnerName);
+                _ownerEmail = value;
+                NotifyOfPropertyChange(() => OwnerEmail);
             }
         }
 
-        [DataMember]
+		[DataMember]
+		public virtual string PluginID
+		{
+			get { return _pluginID; }
+			set
+			{
+				_pluginID = value;
+				NotifyOfPropertyChange(() => PluginID);
+			}
+		}
+
+		[DataMember]
         public virtual DateTime? ExpirationDate
         {
             get { return _expirationDate; }

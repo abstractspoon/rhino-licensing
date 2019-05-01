@@ -11,7 +11,7 @@ namespace Rhino.Licensing.AdminTool.Services
         {
             var generator = new LicenseGenerator(product.PrivateKey);
             var expiration = license.ExpirationDate.GetValueOrDefault(DateTime.MaxValue);
-            var key = generator.Generate(license.OwnerName, license.ID, expiration, license.Data.ToDictionary(userData => userData.Key, userData => userData.Value), license.LicenseType);
+            var key = generator.Generate(license.OwnerEmail, license.ID, expiration, license.Data.ToDictionary(userData => userData.Key, userData => userData.Value), license.LicenseType);
 
             File.WriteAllText(path.FullName, key);
         }

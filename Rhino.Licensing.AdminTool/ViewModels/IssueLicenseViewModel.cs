@@ -59,7 +59,7 @@ namespace Rhino.Licensing.AdminTool.ViewModels
             get
             {
                 return CurrentLicense != null &&
-                       !string.IsNullOrWhiteSpace(CurrentLicense.OwnerName);
+                       !string.IsNullOrWhiteSpace(CurrentLicense.OwnerEmail);
             }
         }
 
