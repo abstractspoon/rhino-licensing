@@ -33,6 +33,29 @@ namespace Rhino.Licensing
         /// <summary>
         /// Subscription based license
         /// </summary>
-        Subscription
-    }
+        Subscription,
+
+		// ToDoList licenses
+
+		/// <summary>
+		/// No type specified
+		/// </summary>
+		Free,
+
+		/// <summary>
+		/// Standard license
+		/// </summary>
+		Paid,
+
+		/// <summary>
+		/// All modules free
+		/// </summary>
+		Supporter,
+
+		/// <summary>
+		/// All modules free
+		/// </summary>
+		Contributor,
+
+	}
 }

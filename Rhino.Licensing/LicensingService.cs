@@ -85,7 +85,7 @@ namespace Rhino.Licensing
                 {
                     validator.AssertValidLicense();
                     Debug.WriteLine("Found license for " + validator.Name + " of type: " + validator.LicenseType);
-                    if (validator.LicenseType == LicenseType.Standard &&
+                    if (validator.LicenseType == LicenseType.Paid &&
                         // this prevent a simple cheating of simply copying the same
                         // license file several times
                         set.Add(validator.UserId))
