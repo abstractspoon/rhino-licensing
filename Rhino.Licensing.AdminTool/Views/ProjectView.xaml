@@ -90,7 +90,7 @@
 
                     <ListView.View>
                         <GridView AllowsColumnReorder="True">
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=OwnerEmail}" Header="Owner Email" Width="150" />
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=OwnerID}" Header="Owner Email" Width="150" />
                             <GridViewColumn DisplayMemberBinding="{Binding Path=Plugin}" Header="Plugin ID" Width="150" />
                             <GridViewColumn DisplayMemberBinding="{Binding Path=LicenseType}" Header="LicenseType" Width="150" />
                             <GridViewColumn DisplayMemberBinding="{Binding Path=ExpirationDate}" Header="Expiration Date" Width="150" />

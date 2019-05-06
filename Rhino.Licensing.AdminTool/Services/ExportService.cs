@@ -14,11 +14,11 @@ namespace Rhino.Licensing.AdminTool.Services
 
 			var attributes = license.Data.ToDictionary(userData => userData.Key, userData => userData.Value);
 
-			attributes["email"] = license.OwnerEmail;
+			attributes["owner_id"] = license.OwnerID;
 			attributes["plugin_name"] = license.PluginName;
 			attributes["plugin_id"] = license.PluginID;
 
-			var key = generator.Generate(license.OwnerEmail, license.ID, expiration, attributes, license.LicenseType);
+			var key = generator.Generate(license.OwnerID, license.ID, expiration, attributes, license.LicenseType);
 
             File.WriteAllText(path.FullName, key);
         }
