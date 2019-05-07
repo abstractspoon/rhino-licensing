@@ -149,6 +149,7 @@ namespace Rhino.Licensing.AdminTool.ViewModels
             var product = CurrentProject.Product;
             var model = _viewModelFactory.Create<ISaveFileDialogViewModel>();
             model.Filter = LicenseFileFilter;
+			model.FileName = string.Format("{0}({1}).xml", license.PluginID, license.OwnerID);
 
             _dialogService.ShowSaveFileDialog(model);
 
