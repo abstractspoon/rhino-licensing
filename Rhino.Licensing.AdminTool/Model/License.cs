@@ -60,8 +60,8 @@ namespace Rhino.Licensing.AdminTool.Model
 			{
 				var info = PluginInfo;
 
-				if (info != null && info.Length > 0)
-					return info[0].Trim();
+				if (info != null && info.Length > 1)
+					return info[1].Trim();
 
 				return String.Empty;
 			}
@@ -73,8 +73,8 @@ namespace Rhino.Licensing.AdminTool.Model
 			{
 				var info = PluginInfo;
 
-				if (info != null && info.Length > 1)
-					return info[1].Trim();
+				if (info != null && info.Length > 0)
+					return info[0].Trim();
 
 				return String.Empty;
 			}
@@ -84,8 +84,7 @@ namespace Rhino.Licensing.AdminTool.Model
 		{
 			get
 			{
-				var info = Plugin.Trim().Trim(new char[] { '[', ']' });
-				return info.Split(',');
+				return Plugin.Trim().Split(':');
 			}
 		}
 
