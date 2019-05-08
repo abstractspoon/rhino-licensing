@@ -6,32 +6,32 @@
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:views="clr-namespace:Rhino.Licensing.AdminTool.Views" mc:Ignorable="d" 
              Background="{DynamicResource DialogBackgroundBrush}"
-             d:DesignHeight="300" d:DesignWidth="300"
-             Width="550" Height="300">
-    
-    <Grid FocusManager.FocusedElement="{Binding ElementName=LicenseOwner}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-    
-        <TabControl Margin="5" SelectedIndex="0" Style="{StaticResource BaseTabControl}" Grid.Row="0">
-        
-            <TabControl.Items>
-                <TabItem Header="License Info" Width="120" HorizontalContentAlignment="Center">
-                    <views:LicenseInfoView cal:View.Model="{Binding LicenseInfo}" />
-                </TabItem>
-                <TabItem Header="User Data" Width="120" HorizontalContentAlignment="Center" >
-                    <views:UserDataView cal:View.Model="{Binding UserData}" />
-                </TabItem>
-            </TabControl.Items>
-        </TabControl>
-        <StackPanel Orientation="Horizontal" Grid.Row="1"
+             d:DesignHeight="300"
+             Width="601.852" Height="300">
+
+	<Grid FocusManager.FocusedElement="{Binding ElementName=LicenseOwner}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<TabControl Margin="5" SelectedIndex="0" Style="{StaticResource BaseTabControl}" Grid.Row="0">
+
+			<TabControl.Items>
+				<TabItem Header="License Info" Width="120" HorizontalContentAlignment="Center">
+					<views:LicenseInfoView cal:View.Model="{Binding LicenseInfo}" />
+				</TabItem>
+				<TabItem Header="User Data" Width="120" HorizontalContentAlignment="Center" >
+					<views:UserDataView cal:View.Model="{Binding UserData}" />
+				</TabItem>
+			</TabControl.Items>
+		</TabControl>
+		<StackPanel Orientation="Horizontal" Grid.Row="1"
                     Margin="5,0,5,5"
                     HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button IsDefault="True" Content="Ok" Margin="5" cal:Message.Attach="[Event Click]=[Action Accept]" />
-            <Button IsCancel="True" Content="Cancel" Margin="5" />
-        </StackPanel>
+			<Button IsDefault="True" Content="Ok" Margin="5" cal:Message.Attach="[Event Click]=[Action Accept]" />
+			<Button IsCancel="True" Content="Cancel" Margin="5" />
+		</StackPanel>
 
-    </Grid>
+	</Grid>
 </UserControl>

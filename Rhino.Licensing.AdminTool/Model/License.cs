@@ -84,7 +84,7 @@ namespace Rhino.Licensing.AdminTool.Model
 		{
 			get
 			{
-				return Plugin.Trim().Split(':');
+				return Plugin.Trim().Split('(');
 			}
 		}
 

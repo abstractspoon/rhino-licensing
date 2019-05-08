@@ -18,10 +18,10 @@ namespace Rhino.Licensing.AdminTool.ViewModels
             Items.Add(userDataViewModel);
             Items.Add(licenseInfoViewModel);
 
-            CurrentLicense = new License
-            {
-                LicenseType = LicenseType.Trial,
-                ExpirationDate = DateTime.Now.AddDays(Settings.Default.DefaultTrialDays).Date
+			CurrentLicense = new License
+			{
+				LicenseType = LicenseType.Paid,
+				ExpirationDate = new DateTime(9999, 12, 31),// DateTime.Now.AddDays(Settings.Default.DefaultTrialDays).Date
             };
         }
 

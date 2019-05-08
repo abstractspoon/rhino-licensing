@@ -201,12 +201,14 @@ namespace Rhino.Licensing
 
         private void RaiseLicenseInvalidated()
         {
+/*
             var licenseInvalidated = LicenseInvalidated;
             if (licenseInvalidated == null)
                 throw new InvalidOperationException("License was invalidated, but there is no one subscribe to the LicenseInvalidated event");
 
             licenseInvalidated(LicenseType == LicenseType.Floating ? InvalidationType.CannotGetNewLicense :
                                                                      InvalidationType.TimeExpired);
+*/
         }
 
         private void RaiseMultipleLicenseDiscovered(DiscoveryHost.ClientDiscoveredEventArgs args)
@@ -270,6 +272,7 @@ namespace Rhino.Licensing
                 }
                 //Log.InfoFormat("License expiration date is {0}", ExpirationDate);
 
+/*
                 bool result;
                 if (LicenseType == LicenseType.Subscription)
                 {
@@ -294,6 +297,7 @@ namespace Rhino.Licensing
                     DisableFutureChecks();
                     LicenseExpired(ExpirationDate);
                 }
+*/
 
                 return true;
             }

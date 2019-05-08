@@ -41,9 +41,20 @@
 
         <TextBox x:Name="LicenseID" Text="{Binding Path=CurrentLicense.ID}" IsReadOnly="True" Grid.Row="0" Grid.Column="1" />
         <TextBox x:Name="LicenseOwner" Text="{Binding Path=CurrentLicense.OwnerID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" />
-		<ComboBox x:Name="Plugin" Text="" SelectedItem="{Binding Path=CurrentLicense.Plugin}" Grid.Row="2" Grid.Column="1" />
-        <ComboBox x:Name="LicenseType" ItemsSource="{Binding Source={StaticResource licenseTypes}}" SelectedItem="{Binding Path=CurrentLicense.LicenseType}" Grid.Row="3" Grid.Column="1" />
-        <fl:FXDatePicker x:Name="LicenseDate"  SelectedDateTime="{Binding Path=CurrentLicense.ExpirationDate}" Grid.Row="4" Grid.Column="1" NullValueText="&lt;Never&gt;" DateConverter="{StaticResource expirationDateConverter}" />
+		<ComboBox x:Name="Plugin" Text="" SelectedItem="{Binding Path=CurrentLicense.Plugin}" Grid.Row="2" Grid.Column="1">
+			<ComboBoxItem Content="00000000-0000-0000-0000-000000000000  (All Components)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="4CBCF4EA-7B02-41E1-BE65-3E03025E1FFE  (UIExtension.Week Planner)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="14FC02B5-2DE0-4A2F-BA6A-50A66551864E  (UIExtension.Mind Map)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="3BDEF4EA-7B02-41E1-BE65-3E03025E1FFE  (UIExtension.Word Cloud)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="49A52D2D-7661-49AF-949A-E60066B300FC  (Exporter.Markdown)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="85D6AC7D-2D7D-4ACE-B776-C215FA181C33  (Exporter.Outlook)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="95E6E2D4-2301-461A-80FB-C2863E788F37  (Exporter.HTML Reporter)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="FE0B6B6E-2B61-4AEB-AA0D-98DBE5942F02  (Comments.HTML)" FontFamily="Lucida Console" />
+			<ComboBoxItem Content="BAA4E079-268B-4B9B-B7C8-6D15CCF058A2  (Comments.Markdown)" FontFamily="Lucida Console" />
+		</ComboBox>
+
+		<ComboBox x:Name="LicenseType" ItemsSource="{Binding Source={StaticResource licenseTypes}}" SelectedItem="{Binding Path=CurrentLicense.LicenseType}" Grid.Row="3" Grid.Column="1"/>
+		<fl:FXDatePicker x:Name="LicenseDate"  SelectedDateTime="{Binding Path=CurrentLicense.ExpirationDate}" Grid.Row="4" Grid.Column="1" NullValueText="&lt;Never&gt;" DateConverter="{StaticResource expirationDateConverter}" />
 
     </Grid>
 </UserControl>

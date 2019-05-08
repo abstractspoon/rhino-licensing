@@ -5,6 +5,7 @@ namespace Rhino.Licensing
     /// </summary>
     public enum LicenseType
     {
+/*
         /// <summary>
         /// No type specified
         /// </summary>
@@ -34,7 +35,7 @@ namespace Rhino.Licensing
         /// Subscription based license
         /// </summary>
         Subscription,
-
+*/
 		// ToDoList licenses
 
 		/// <summary>

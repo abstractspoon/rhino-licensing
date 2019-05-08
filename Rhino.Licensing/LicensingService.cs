@@ -174,6 +174,7 @@ namespace Rhino.Licensing
 			string user,
 			Guid id)
 		{
+/*
 			KeyValuePair<DateTime, LicenseValidator> value;
 			var identifier = machine + @"\" + user + ": " + id;
 			if (leasedLicenses.TryGetValue(identifier, out value))
@@ -198,9 +199,11 @@ namespace Rhino.Licensing
 				return GenerateLicenseAndRenewLease(identifier, id, kvp.Value.Value, kvp.Value.Value.LicenseAttributes);
 			}
 			Debug.WriteLine("Could not find license to lease");
+*/
 			return null;
 		}
 
+/*
 		private string GenerateLicenseAndRenewLease(string identifier, Guid id, LicenseValidator licenseValidator, IDictionary<string, string> attributes)
 		{
 			leasedLicenses[identifier] = new KeyValuePair<DateTime, LicenseValidator>(DateTime.UtcNow.AddMinutes(30), licenseValidator);
@@ -210,11 +213,14 @@ namespace Rhino.Licensing
 			}
 			return GenerateLicense(id, licenseValidator, attributes);
 		}
+*/
 
+/*
 		private static string GenerateLicense(Guid id, LicenseValidator validator, IDictionary<string, string> attributes)
 		{
 			var generator = new LicenseGenerator(LicenseServerPrivateKey);
 			return generator.Generate(validator.Name, id, DateTime.UtcNow.AddMinutes(45), attributes ,LicenseType.Floating);
 		}
+*/
 	}
 }
