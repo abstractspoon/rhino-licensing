@@ -41,7 +41,7 @@
 
         <TextBox x:Name="LicenseID" Text="{Binding Path=CurrentLicense.ID}" IsReadOnly="True" Grid.Row="0" Grid.Column="1" />
         <TextBox x:Name="LicenseOwner" Text="{Binding Path=CurrentLicense.OwnerID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" />
-		<ComboBox x:Name="Plugin" Text="" SelectedItem="{Binding Path=CurrentLicense.Plugin}" Grid.Row="2" Grid.Column="1">
+		<ComboBox x:Name="Plugin" Text="{Binding Path=CurrentLicense.Plugin}" Grid.Row="2" Grid.Column="1">
 			<ComboBoxItem Content="00000000-0000-0000-0000-000000000000  (All Components)" FontFamily="Lucida Console" />
 			<ComboBoxItem Content="4CBCF4EA-7B02-41E1-BE65-3E03025E1FFE  (UIExtension.Week Planner)" FontFamily="Lucida Console" />
 			<ComboBoxItem Content="14FC02B5-2DE0-4A2F-BA6A-50A66551864E  (UIExtension.Mind Map)" FontFamily="Lucida Console" />
